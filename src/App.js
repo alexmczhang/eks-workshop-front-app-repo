@@ -46,7 +46,7 @@ function App(props) {
   
   useEffect(() => {
     const fetchData = async () => {
-      var url = 'http://k8s-default-backendi-6566bc7d31-137539812.ap-southeast-1.elb.amazonaws.com/contents/${search}'
+      var url = `http://k8s-default-backendi-6566bc7d31-137539812.ap-southeast-1.elb.amazonaws.com/contents/${search}`
       const result = await axios(url);
       setState(result.data);
     };
