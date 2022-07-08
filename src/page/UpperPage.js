@@ -31,10 +31,11 @@ function UpperPage() {
     const [ data, setState ] = useState({outcome:[]})
     
     // const url = '{backend-ingress ADDRESS}/services/all'
-    const url = `http://k8s-default-backendi-6566bc7d31-137539812.ap-southeast-1.elb.amazonaws.com/services/all`
+    // const url = 'http://k8s-default-backendi-6566bc7d31-137539812.ap-southeast-1.elb.amazonaws.com/services/all'
     
     useEffect(() => {
       const fetchData = async () => {
+        const url = 'http://k8s-default-backendi-6566bc7d31-137539812.ap-southeast-1.elb.amazonaws.com/services/all'
         const result = await axios(
           url,
         );
